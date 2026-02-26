@@ -1,0 +1,47 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+    --mp-bg: #0b0f14;
+    --mp-surface: rgba(255, 255, 255, .06);
+    --mp-border: rgba(255, 255, 255, .10);
+    --mp-text: #e9eef6;
+    --mp-muted: rgba(233, 238, 246, .72);
+    --mp-accent: #00e5ff;
+}
+
+body {
+    background: radial-gradient(1200px 600px at 20% 0%, rgba(0, 229, 255, .15), transparent 55%),
+        radial-gradient(900px 500px at 80% 10%, rgba(255, 0, 102, .12), transparent 60%),
+        var(--mp-bg);
+    color: var(--mp-text);
+}
+
+.mp-surface {
+    background: var(--mp-surface);
+    border: 1px solid var(--mp-border);
+    backdrop-filter: blur(10px);
+}
+
+.mp-muted {
+    color: var(--mp-muted);
+}
+
+.btn-mp {
+    background: linear-gradient(90deg, var(--mp-accent), #7c4dff);
+    border: 0;
+    color: #081018;
+    font-weight: 700;
+}
+
+.btn-mp:hover {
+    filter: brightness(1.05);
+}
+
+.mp-link {
+    color: var(--mp-text);
+    text-decoration: none;
+}
+
+.mp-link:hover {
+    color: var(--mp-accent);
+}
