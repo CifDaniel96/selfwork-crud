@@ -23,11 +23,12 @@
                 <p class="text-secondary mb-3">
                     Pubblicato: {{ $article->created_at?->format('d/m/Y H:i') }}
                 </p>
-
+                
                 <div class="fs-5 lh-lg">
                     {{ $article->content }}
                 </div>
-
+                <strong><p>Autore: {{ $article->user->name }}</p></strong>
+                
                 <hr class="border-secondary my-4">
 
                 <div class="d-flex justify-content-end">

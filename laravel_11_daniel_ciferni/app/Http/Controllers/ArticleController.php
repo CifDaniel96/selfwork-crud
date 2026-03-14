@@ -37,7 +37,8 @@ class ArticleController extends Controller
             'title'=>'required|string|max:255',
             'content'=>'required|string'
         ]);
-        Article::create($validated);
+        
+        auth()->user()->articles()->create($validated);
         return redirect()->route('articles.index');
     }
 
