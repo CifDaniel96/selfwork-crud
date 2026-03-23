@@ -2,9 +2,11 @@
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h1 class="h3 fw-bold mb-0">Articoli</h1>
+            @auth
             <a href="{{ route('articles.create') }}" class="btn btn-dark">
                 + Nuovo articolo
             </a>
+            @endauth
         </div>
 
         @forelse ($articles as $article)

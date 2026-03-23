@@ -11,10 +11,11 @@
                 <a href="{{ route('articles.index') }}" class="btn btn-outline-light">
                     ← Indietro
                 </a>
-
+                @auth
                 <a href="{{ route('articles.edit', $article) }}" class="d-flex align-items-center btn btn-warning">
                     Modifica
                 </a>
+                @endauth
             </div>
         </div>
 
@@ -35,9 +36,11 @@
                     <form method="POST" action="{{ route('articles.destroy', $article) }}">
                         @csrf
                         @method('DELETE')
+                        @auth
                         <button class="btn btn-outline-danger">
                             Elimina articolo
                         </button>
+                        @endauth
                     </form>
                 </div>
             </div>
